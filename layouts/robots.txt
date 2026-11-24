@@ -1,0 +1,4 @@
+{{/* Served at /robots.txt (enableRobotsTXT in hugo.toml). Allows everything and points to the sitemap. */}}
+User-agent: *
+Allow: /
+Sitemap: {{ "sitemap.xml" | absURL }}

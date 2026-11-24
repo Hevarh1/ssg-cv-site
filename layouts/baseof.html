@@ -1,0 +1,17 @@
+<!doctype html>
+{{/* lang comes from hugo.toml (locale), so it is never hard-coded */}}
+<html lang="{{ site.Language.Locale }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{/* First focusable element: lets keyboard users jump past the navigation */}}
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main" tabindex="-1">
+    {{/* Each layout (home, single, list, ...) fills this block with its own content */}}
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>

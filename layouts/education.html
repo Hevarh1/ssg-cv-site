@@ -1,0 +1,6 @@
+{{/* Used by content/education.md (layout: education) */}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ partial "education-list.html" . }}
+{{ end }}

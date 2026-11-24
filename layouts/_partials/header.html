@@ -1,0 +1,5 @@
+{{/* Site name plus the navigation partial; passes the page through with "." */}}
+<header>
+  <p class="site-name"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></p>
+  {{ partial "nav.html" . }}
+</header>

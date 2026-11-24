@@ -1,0 +1,12 @@
+{{/* The Projects list page: each project with its description and tags. */}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range .Pages }}
+<article class="entry">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p>{{ .Description }}</p>
+  {{ partial "tags.html" . }}
+</article>
+{{ end }}
+{{ end }}

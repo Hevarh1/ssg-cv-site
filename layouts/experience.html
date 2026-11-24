@@ -1,0 +1,6 @@
+{{/* Used by content/experience.md (layout: experience). Content file gives the title; data file gives the entries. */}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ partial "experience-list.html" . }}
+{{ end }}

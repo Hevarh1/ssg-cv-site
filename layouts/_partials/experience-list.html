@@ -1,0 +1,11 @@
+{{/* Data-driven: loops over data/experience.yaml (not a content file), already ordered newest first. */}}
+{{ range hugo.Data.experience }}
+<section class="entry">
+  <h2>{{ .role }}</h2>
+  <p class="meta">{{ .org }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
+  <ul>
+    {{ range .points }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  {{ with .stack }}<p><strong>Tech stack:</strong> {{ . }}</p>{{ end }}
+</section>
+{{ end }}

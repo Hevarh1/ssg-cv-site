@@ -1,0 +1,8 @@
+{{/* Receives the current page as its dot. Loops over the menu defined in hugo.toml. */}}
+<nav aria-label="Main navigation">
+  {{ $page := . }}
+  {{ range site.Menus.main }}
+  {{/* aria-current marks the page you are on, so it is not conveyed by colour alone */}}
+  <a href="{{ .URL }}"{{ if $page.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+  {{ end }}
+</nav>

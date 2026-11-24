@@ -1,0 +1,43 @@
+# Site-wide settings. baseURL stays a placeholder until the deployment stage.
+# The site lives in the /ssg/ folder of hevar.net (Laravel's public/ssg/).
+baseURL = 'https://hevar.net/ssg/'
+locale = 'en'
+title = 'Hevar Hemin'
+# Generated folders are built fresh each time; keep it simple and quiet.
+enableRobotsTXT = true
+
+# Values templates read as .Site.Params.* (nothing secret: build-time values are public).
+[params]
+  description = 'Personal CV and portfolio of Hevar Hemin, software engineer in Erbil, Iraq.'
+  author = 'Hevar Hemin'
+
+# Main navigation. weight sets the order; templates loop over .Site.Menus.main.
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Experience'
+    pageRef = '/experience'
+    weight = 30
+  [[menus.main]]
+    name = 'Education'
+    pageRef = '/education'
+    weight = 40
+  [[menus.main]]
+    name = 'Skills'
+    pageRef = '/skills'
+    weight = 50
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 60
+  [[menus.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 70

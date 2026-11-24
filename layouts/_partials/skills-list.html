@@ -1,0 +1,9 @@
+{{/* Data-driven: each group in data/skills.yaml becomes a heading and a list. */}}
+{{ range hugo.Data.skills }}
+<section>
+  <h2>{{ .group }}</h2>
+  <ul class="skill-list">
+    {{ range .items }}<li>{{ . }}</li>{{ end }}
+  </ul>
+</section>
+{{ end }}

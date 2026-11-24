@@ -1,0 +1,13 @@
+{{/* Data-driven: schools and certifications from data/education.yaml */}}
+{{ range hugo.Data.education.schools }}
+<section class="entry">
+  <h2>{{ .degree }}</h2>
+  <p class="meta">{{ .school }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
+</section>
+{{ end }}
+<h2>Certifications and test scores</h2>
+<ul>
+  {{ range hugo.Data.education.certifications }}
+  <li><strong>{{ .name }}</strong> ({{ .date }}): {{ .detail }}</li>
+  {{ end }}
+</ul>

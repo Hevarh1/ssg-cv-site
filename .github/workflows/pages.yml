@@ -1,0 +1,48 @@
+# Builds the Hugo site and deploys it to GitHub Pages on every push to main.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.170.0
+    steps:
+      - name: Install Hugo
+        run: |
+          wget -q -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+          hugo version
+      - uses: actions/checkout@v4
+      - id: pages
+        uses: actions/configure-pages@v5
+      # -D includes the draft pages (the draft flags stay in the files, see AGENTS.md).
+      # baseURL comes from the Pages settings, so hugo.toml still works for hevar.net/ssg.
+      - name: Build
+        run: hugo --minify --panicOnWarning -D --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

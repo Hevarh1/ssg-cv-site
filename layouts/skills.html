@@ -1,0 +1,6 @@
+{{/* Used by content/skills.md (layout: skills) */}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ partial "skills-list.html" . }}
+{{ end }}

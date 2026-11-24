@@ -1,0 +1,6 @@
+{{/* Shows the tags of one page as links to the generated tag pages. */}}
+{{ with .GetTerms "tags" }}
+<p class="tags">Technologies:
+  {{ range . }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> {{ end }}
+</p>
+{{ end }}
