@@ -5,6 +5,8 @@ locale = 'en'
 title = 'Hevar Hemin'
 # Generated folders are built fresh each time; keep it simple and quiet.
 enableRobotsTXT = true
+# No /tags/ or /categories/ pages: technologies are shown as plain labels.
+disableKinds = ['taxonomy', 'term']
 
 # Values templates read as .Site.Params.* (nothing secret: build-time values are public).
 [params]

@@ -1,8 +1,0 @@
-{{/* One tag page, e.g. /tags/laravel/: the projects that use it. */}}
-{{ define "main" }}
-<h1>Projects tagged {{ .Title }}</h1>
-<ul>
-  {{ range .Pages }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
-</ul>
-<p><a href="{{ "tags/" | relURL }}">&larr; All tags</a></p>
-{{ end }}

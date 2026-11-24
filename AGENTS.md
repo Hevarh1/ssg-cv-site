@@ -7,10 +7,10 @@ Hugo personal CV site for Hevar Hemin (university SSG project). Hugo v0.170.0.
 
 ## File map
 - `hugo.toml`: title, language, params, main menu.
-- `content/`: one Markdown file per page. `content/projects/` holds one page per project (tagged by technology).
+- `content/`: one Markdown file per page. `content/projects/` holds one page per project; `tags` lists its technologies (plain labels, no tag pages) and optional `link` is the live site.
 - `data/`: `experience.yaml`, `education.yaml`, `skills.yaml`. Looped by the `*-list.html` partials (read with `hugo.Data`, not the deprecated `site.Data`).
-- `layouts/`: `baseof.html` (page shell with `block "main"`), `home.html`, `single.html`, `list.html` (generic fallbacks); `experience.html`, `education.html`, `skills.html` (chosen by `layout:` in the content file); `projects/list.html`, `projects/single.html`; `taxonomy.html` and `term.html` for `/tags/`; `robots.txt`.
-- `layouts/_partials/`: `head.html` (title, description, canonical, Open Graph, favicon, CSS), `header.html`, `nav.html`, `footer.html`, `tags.html`, `experience-list.html`, `education-list.html`, `skills-list.html`.
+- `layouts/`: `baseof.html` (page shell with `block "main"`), `home.html`, `single.html`, `list.html` (generic fallbacks); `experience.html`, `education.html`, `skills.html` (chosen by `layout:` in the content file); `projects/list.html`, `projects/single.html`; `robots.txt`.
+- `layouts/_partials/`: `head.html` (title, description, canonical, Open Graph, favicon, CSS), `header.html`, `nav.html`, `project-link.html`, `footer.html`, `tags.html`, `experience-list.html`, `education-list.html`, `skills-list.html`.
 - `assets/css/main.css`: plain CSS (light/dark tokens, print styles), processed by Hugo Pipes.
 - `static/favicon.svg`: favicon. There is no CV PDF yet (it would expose the phone number; see OPEN-QUESTIONS.md #4).
 - `OPEN-QUESTIONS.md`: conflicts and gaps in the sources (local only, ignored by git).

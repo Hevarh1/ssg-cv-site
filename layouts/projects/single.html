@@ -1,8 +1,9 @@
-{{/* One project page: title, body from Markdown, then its technology tags. */}}
+{{/* One project page: title, body from Markdown, live link (if any), then its technologies. */}}
 {{ define "main" }}
 <article>
   <h1>{{ .Title }}</h1>
   {{ .Content }}
+  {{ partial "project-link.html" . }}
   {{ partial "tags.html" . }}
   <p><a href="{{ .Parent.RelPermalink }}">&larr; All projects</a></p>
 </article>

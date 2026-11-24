@@ -1,9 +1,0 @@
-{{/* The /tags/ page: every tag, with how many pages use it. */}}
-{{ define "main" }}
-<h1>{{ .Title }}</h1>
-<ul>
-  {{ range .Data.Terms.Alphabetical }}
-  <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
-  {{ end }}
-</ul>
-{{ end }}

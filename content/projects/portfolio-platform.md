@@ -4,6 +4,7 @@ description: "A custom portfolio with a Laravel backend and a React frontend, bu
 date: 2026-11-23
 weight: 30
 tags: ["Laravel", "React"]
+link: "https://hevar.net"
 draft: true
 ---
 A custom portfolio built with Laravel as the backend and React as the frontend. It strengthened my full-stack product delivery across modern web interfaces.

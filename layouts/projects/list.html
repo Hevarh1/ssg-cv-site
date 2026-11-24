@@ -1,4 +1,4 @@
-{{/* The Projects list page: each project with its description and tags. */}}
+{{/* The Projects list page: each project with its description, live link (if any) and technologies. */}}
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
@@ -6,6 +6,7 @@
 <article class="entry">
   <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   <p>{{ .Description }}</p>
+  {{ partial "project-link.html" . }}
   {{ partial "tags.html" . }}
 </article>
 {{ end }}

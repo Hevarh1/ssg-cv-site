@@ -1,0 +1,4 @@
+{{/* Link to the live project, from `link` in the page's front matter. Shows the domain as the text. */}}
+{{ with .Params.link }}
+<p class="project-link"><a href="{{ . }}" target="_blank" rel="noopener">Visit {{ (urls.Parse .).Host }} &#8599;</a></p>
+{{ end }}
