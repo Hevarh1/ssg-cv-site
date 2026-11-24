@@ -1,9 +1,17 @@
-{{/* Data-driven: each group in data/skills.yaml becomes a heading and a list. */}}
-{{ range hugo.Data.skills }}
-<section>
-  <h2>{{ .group }}</h2>
-  <ul class="skill-list">
-    {{ range .items }}<li>{{ . }}</li>{{ end }}
-  </ul>
-</section>
+{{/* Data-driven (book Ch. 12): each record in assets/data/skills.json becomes a heading and a list. */}}
+{{/* resources.Get looks inside assets/, so the path leaves off "assets/". */}}
+{{ with resources.Get "data/skills.json" }}
+  {{/* transform.Unmarshal turns the JSON array into values; range visits each record. */}}
+  {{ range . | transform.Unmarshal }}
+  <section>
+    <h2>{{ .group }}</h2>
+    <ul class="skill-list">
+      {{ range .items }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </section>
+  {{ else }}
+  <p>No skills to display yet.</p>
+  {{ end }}
+{{ else }}
+  {{ errorf "Missing skills data: assets/data/skills.json" }}
 {{ end }}

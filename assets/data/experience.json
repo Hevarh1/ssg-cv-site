@@ -1,0 +1,69 @@
+[
+  {
+    "role": "Full-Stack Developer",
+    "org": "Salahaddin University",
+    "place": "Erbil, Iraq",
+    "start": "Feb 2025",
+    "end": "Jan 2026",
+    "points": [
+      "Led development of a web-based lecturer feedback platform serving over 20,000 active students.",
+      "Designed role-based access control (RBAC), analytical administrative dashboards, and secure submission flows.",
+      "Prevented duplicate record submissions and resolved scaling and responsive view challenges across mobile browsers."
+    ],
+    "stack": ["Laravel", "MySQL", "Livewire", "Tailwind CSS"]
+  },
+  {
+    "role": "Assistant AI Project Developer (volunteer)",
+    "org": "University of Malaya Robotics Lab",
+    "place": "Kuala Lumpur, Malaysia",
+    "start": "Jun 2020",
+    "end": "Jan 2022",
+    "points": [
+      "Volunteered at the Advanced Robotics Lab under the direct academic guidance of Prof. Loo Chu Kiong.",
+      "Programmed software pipelines using PyTorch and TensorFlow for Smart Glasses to support computer vision tasks.",
+      "Developed and tested a lightweight facial recognition application optimized for Android mobile processors.",
+      "Analyzed lab research datasets, documented codebase guidelines, and recommended process improvements."
+    ],
+    "stack": []
+  },
+  {
+    "role": "Mobile App Developer",
+    "org": "C4kurd",
+    "place": "Remote",
+    "start": "Dec 2018",
+    "end": "Present",
+    "points": [
+      "Supervised the design, coding, and production-ready deployment of 7+ Android apps.",
+      "Built Prayer Time (Bang) (2M+ installs), Food App (50k+ installs), Malaysian Prayer Time, High School App (Poli 12 Pro), and C4kurd Tech News.",
+      "Managed hybrid sync using MySQL for server-side tables and SQLite for local cache storage.",
+      "Integrated real-time analytics, user feedback modules, and custom push notification systems.",
+      "Repaired and stabilized a Java-based company app with Bluetooth receipt printer connectivity, enabling long-term production use after handoff (June 2022)."
+    ],
+    "stack": ["Kotlin", "Flutter", "Android SDK", "SQLite", "Firebase", "REST APIs"]
+  },
+  {
+    "role": "YouTube Content Creator",
+    "org": "Self-employed / C4kurd",
+    "place": "Remote",
+    "start": "Jun 2017",
+    "end": "Present",
+    "points": [
+      "Produced over 15 Android Studio tutorials and 4 game development tutorials.",
+      "Reached over 120k cumulative channel views across 75+ video uploads, with the Unity series at over 100k joint views."
+    ],
+    "stack": []
+  },
+  {
+    "role": "Web Developer",
+    "org": "Freelance & Community",
+    "place": "Erbil, Iraq",
+    "start": "Jan 2013",
+    "end": "Present",
+    "points": [
+      "Built Laravel-based portals and management systems with structured database models, authentication, and administrative workflows.",
+      "Designed and maintained custom WordPress and PHP-backed portals, including the official Conference page for Salahaddin University.",
+      "Managed server-side logic in PHP to protect system layers, optimize database queries, and improve loading speed."
+    ],
+    "stack": ["Laravel", "PHP", "WordPress", "Alpine.js"]
+  }
+]

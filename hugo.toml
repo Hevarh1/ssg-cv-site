@@ -1,9 +1,9 @@
-# Site-wide settings. baseURL stays a placeholder until the deployment stage.
-# The site lives in the /ssg/ folder of hevar.net (Laravel's public/ssg/).
+# Site-wide settings.
+# The site lives in the /ssg/ folder of hevar.net. GitHub Pages replaces this baseURL when it builds.
 baseURL = 'https://hevar.net/ssg/'
 locale = 'en'
 title = 'Hevar Hemin'
-# Generated folders are built fresh each time; keep it simple and quiet.
+# Build /robots.txt from layouts/robots.txt.
 enableRobotsTXT = true
 # No /tags/ or /categories/ pages: technologies are shown as plain labels.
 disableKinds = ['taxonomy', 'term']

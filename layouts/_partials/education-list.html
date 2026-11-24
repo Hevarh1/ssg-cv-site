@@ -1,13 +1,27 @@
-{{/* Data-driven: schools and certifications from data/education.yaml */}}
-{{ range hugo.Data.education.schools }}
-<section class="entry">
-  <h2>{{ .degree }}</h2>
-  <p class="meta">{{ .school }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
-</section>
+{{/* Data-driven (book Ch. 12): schools from assets/data/education.json, certifications from assets/data/certifications.json. */}}
+{{/* resources.Get looks inside assets/, so the path leaves off "assets/". */}}
+{{ with resources.Get "data/education.json" }}
+  {{/* transform.Unmarshal turns the JSON array into values; range visits each record. */}}
+  {{ range . | transform.Unmarshal }}
+  <section class="entry">
+    <h2>{{ .degree }}</h2>
+    <p class="meta">{{ .school }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
+  </section>
+  {{ else }}
+  <p>No education to display yet.</p>
+  {{ end }}
+{{ else }}
+  {{ errorf "Missing education data: assets/data/education.json" }}
 {{ end }}
 <h2>Certifications and test scores</h2>
+{{ with resources.Get "data/certifications.json" }}
 <ul>
-  {{ range hugo.Data.education.certifications }}
+  {{ range . | transform.Unmarshal }}
   <li><strong>{{ .name }}</strong> ({{ .date }}): {{ .detail }}</li>
+  {{ else }}
+  <li>No certifications to display yet.</li>
   {{ end }}
 </ul>
+{{ else }}
+  {{ errorf "Missing certification data: assets/data/certifications.json" }}
+{{ end }}

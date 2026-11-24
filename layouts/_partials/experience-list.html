@@ -1,11 +1,20 @@
-{{/* Data-driven: loops over data/experience.yaml (not a content file), already ordered newest first. */}}
-{{ range hugo.Data.experience }}
-<section class="entry">
-  <h2>{{ .role }}</h2>
-  <p class="meta">{{ .org }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
-  <ul>
-    {{ range .points }}<li>{{ . }}</li>{{ end }}
-  </ul>
-  {{ with .stack }}<p><strong>Tech stack:</strong> {{ . }}</p>{{ end }}
-</section>
+{{/* Data-driven (book Ch. 12): records from assets/data/experience.json, already ordered newest first. */}}
+{{/* resources.Get looks inside assets/, so the path leaves off "assets/". */}}
+{{ with resources.Get "data/experience.json" }}
+  {{/* transform.Unmarshal turns the JSON array into values; range visits each record. */}}
+  {{ range . | transform.Unmarshal }}
+  <section class="entry">
+    <h2>{{ .role }}</h2>
+    <p class="meta">{{ .org }}, {{ .place }} &middot; {{ .start }} &ndash; {{ .end }}</p>
+    <ul>
+      {{ range .points }}<li>{{ . }}</li>{{ end }}
+    </ul>
+    {{/* An empty stack array skips the whole paragraph; delimit joins the names with commas. */}}
+    {{ with .stack }}<p><strong>Tech stack:</strong> {{ delimit . ", " }}</p>{{ end }}
+  </section>
+  {{ else }}
+  <p>No experience to display yet.</p>
+  {{ end }}
+{{ else }}
+  {{ errorf "Missing experience data: assets/data/experience.json" }}
 {{ end }}

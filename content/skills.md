@@ -5,5 +5,7 @@ date: 2026-11-23
 weight: 50
 layout: "skills"
 draft: true
-# TODO: the skills come from data/skills.yaml, rendered in stage (c).
+# Groups: assets/data/skills.json.
+# Source: Resume_Hevar.pdf, plus Unity, Photoshop, WordPress, HTML & CSS and the AI prototyping line from other versions.
+# TODO: rating words (Very Good, Excellent) in older CV versions are left out (OPEN-QUESTIONS.md #8).
 ---
