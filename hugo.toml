@@ -1,6 +1,6 @@
 # Site-wide settings.
-# The site lives in the /ssg/ folder of hevar.net. GitHub Pages replaces this baseURL when it builds.
-baseURL = 'https://hevar.net/ssg/'
+# Where the site lives: GitHub Pages, in the ssg-cv-site folder.
+baseURL = 'https://hevarh1.github.io/ssg-cv-site/'
 locale = 'en'
 title = 'Hevar Hemin'
 # Build /robots.txt from layouts/robots.txt.

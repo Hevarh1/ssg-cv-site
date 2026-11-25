@@ -3,7 +3,7 @@
 Hugo personal CV site for Hevar Hemin (university SSG project). Hugo v0.170.0.
 
 ## Build
-`hugo --minify --panicOnWarning` from this folder checks the build (drafts are skipped). Publishing: every push to `main` runs `.github/workflows/pages.yml`, which builds with Hugo 0.170.0 (`hugo --minify --panicOnWarning -D`, baseURL taken from the Pages settings) and deploys to https://hevarh1.github.io/ssg-cv-site/. -D includes the draft pages; the draft flags stay in the files. `baseURL` in `hugo.toml` stays `https://hevar.net/ssg/` for the copy built into HevarNet's `public/ssg`.
+`hugo --minify --panicOnWarning` from this folder checks the build (drafts are skipped). Publishing: every push to `main` runs `.github/workflows/pages.yml`, which builds with Hugo 0.170.0 (`hugo --minify --panicOnWarning -D`) and deploys to https://hevarh1.github.io/ssg-cv-site/, the `baseURL` in `hugo.toml`. -D includes the draft pages; the draft flags stay in the files.
 
 ## File map
 - `hugo.toml`: title, language, params, main menu.

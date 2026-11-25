@@ -27,12 +27,11 @@ jobs:
           sudo dpkg -i hugo.deb
           hugo version
       - uses: actions/checkout@v4
-      - id: pages
-        uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v5
       # -D includes the draft pages (the draft flags stay in the files, see AGENTS.md).
-      # baseURL comes from the Pages settings, so hugo.toml still works for hevar.net/ssg.
+      # baseURL comes from hugo.toml.
       - name: Build
-        run: hugo --minify --panicOnWarning -D --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify --panicOnWarning -D
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
