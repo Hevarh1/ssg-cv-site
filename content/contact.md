@@ -2,7 +2,6 @@
 title: "Contact"
 description: "How to contact Hevar Hemin."
 date: 2026-11-23
-weight: 70
 draft: true
 ---
 The best way to reach me is by email.

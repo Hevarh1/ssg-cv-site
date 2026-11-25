@@ -2,7 +2,6 @@
 title: "About"
 description: "About Hevar Hemin: a software developer and product builder from Erbil, Iraq."
 date: 2026-11-23
-weight: 20
 draft: true
 # TODO: no separate bio file was provided; this text is built only from the CV summary. Add your own voice if you want (OPEN-QUESTIONS.md #7).
 ---

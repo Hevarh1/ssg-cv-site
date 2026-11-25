@@ -2,7 +2,6 @@
 title: "Education"
 description: "Education, certifications and test scores of Hevar Hemin."
 date: 2026-11-23
-weight: 40
 layout: "education"
 draft: true
 # Entries: assets/data/education.json (schools) and assets/data/certifications.json.

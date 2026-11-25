@@ -22,5 +22,5 @@ Every push to `main` builds the site and publishes it to GitHub Pages through `.
 - `content/`: one Markdown file per page; `content/projects/` holds the project pages
 - `assets/data/`: experience, education, certifications and skills (JSON)
 - `layouts/`: Hugo templates and partials
-- `assets/css/main.css`: styles (light/dark, print)
+- `assets/css/main.css`: styles (one light theme)
 - `static/`: favicon

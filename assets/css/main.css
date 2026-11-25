@@ -28,7 +28,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .site-name { font-size: 1.25rem; font-weight: 700; margin: 0; }
 .site-name a { color: inherit; text-decoration: none; }
 nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.5rem; }
-/* Current page: bold + underline (not colour alone) */
+/* Current page: bold (links keep their underline, so not colour alone) */
 nav a[aria-current="page"] { font-weight: 700; }
 
 .entry { border-top: 1px solid var(--line); padding-top: 0.5rem; }

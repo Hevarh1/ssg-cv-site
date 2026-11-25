@@ -2,7 +2,6 @@
 title: "Experience"
 description: "Work, volunteering and publishing experience of Hevar Hemin, newest first."
 date: 2026-11-23
-weight: 30
 layout: "experience"
 draft: true
 # Entries: assets/data/experience.json, newest start date first.
